@@ -2,7 +2,7 @@
 #include <chrono>
 
 /*
-Resultado:
+Resultados hasta 1M:
 
 PC: Intel Core i5-7200U 2.50GHz
 Cantidad de numeros primos hasta 1000000: 78498
@@ -11,6 +11,16 @@ Tiempo de ejecucion: 0.226117 segundos
 Raspberry Pi 4: ARM Cortex-A72 1.5GHz
 Cantidad de numeros primos hasta 1000000: 78498
 Tiempo de ejecucion: 0.39792 segundos
+
+Resultados hasta 10M:
+
+PC: Intel Core i5-7200U 2.50GHz
+Cantidad de numeros primos hasta 10000000: 664579
+Tiempo de ejecucion: 6.07744 segundos
+
+Raspberry Pi 4: ARM Cortex-A72 1.5GHz
+Cantidad de numeros primos hasta 10000000: 664579
+Tiempo de ejecucion: 9.15085 segundos
 
 */
 
@@ -23,7 +33,7 @@ bool esPrimo(int n) {
 }
 
 int main() {
-    const int limite = 1000000;
+    const int limite = 10000000;
     int contadorPrimos = 0;
 
     // Inicia la medici�n de tiempo
