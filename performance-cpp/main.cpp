@@ -3,8 +3,15 @@
 
 /*
 Resultado:
+
+PC: Intel Core i5-7200U 2.50GHz
 Cantidad de numeros primos hasta 1000000: 78498
 Tiempo de ejecucion: 0.226117 segundos
+
+Raspberry Pi 4: ARM Cortex-A72 1.5GHz
+Cantidad de numeros primos hasta 1000000: 78498
+Tiempo de ejecucion: 0.39792 segundos
+
 */
 
 bool esPrimo(int n) {
@@ -19,7 +26,7 @@ int main() {
     const int limite = 1000000;
     int contadorPrimos = 0;
 
-    // Inicia la medición de tiempo
+    // Inicia la mediciï¿½n de tiempo
     auto inicio = std::chrono::high_resolution_clock::now();
 
     for (int i = 2; i <= limite; ++i) {
@@ -28,7 +35,7 @@ int main() {
         }
     }
 
-    // Termina la medición de tiempo
+    // Termina la mediciï¿½n de tiempo
     auto fin = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> duracion = fin - inicio;
 
